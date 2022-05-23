@@ -219,7 +219,7 @@ microservice Notification with notification
 deployment {
   deploymentType kubernetes
   appsFolders [store, invoice, notification, product]
-  dockerRepositoryName "@Replace With Your Docker repo name@"
+  dockerRepositoryName "deepu105" // @Replace With Your Docker repo name@
   serviceDiscoveryType eureka
   kubernetesServiceType LoadBalancer
   kubernetesNamespace jhipster

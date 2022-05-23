@@ -1,0 +1,63 @@
+{
+  "applications": ["store", "invoice"],
+  "changelogDate": "20220523114336",
+  "clientRootFolder": "invoice",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "invoice",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "details",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "InvoiceStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PAID,ISSUED,CANCELLED"
+    },
+    {
+      "fieldName": "paymentMethod",
+      "fieldType": "PaymentMethod",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "CREDIT_CARD,CASH_ON_DELIVERY,PAYPAL"
+    },
+    {
+      "fieldName": "paymentDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentAmount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Entities for Invoice microservice",
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "invoice",
+  "name": "Invoice",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "shipment",
+      "otherEntityRelationshipName": "invoice",
+      "relationshipName": "shipment",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

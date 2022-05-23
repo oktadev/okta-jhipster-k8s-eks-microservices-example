@@ -1,0 +1,13 @@
+apply plugin: "war"
+
+bootWar {
+    mainClass = "com.okta.demo.invoice.InvoiceApp"
+    includes = ["WEB-INF/**", "META-INF/**"]
+}
+
+war {
+    enabled = true
+    archiveExtension = "war.original"
+    includes = ["WEB-INF/**", "META-INF/**"]
+
+}
