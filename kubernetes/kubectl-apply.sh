@@ -28,7 +28,6 @@ default() {
     kubectl apply -f registry-${suffix}/
     kubectl apply -f store-${suffix}/
     kubectl apply -f invoice-${suffix}/
-    kubectl apply -f notification-${suffix}/
     kubectl apply -f product-${suffix}/
 
 }

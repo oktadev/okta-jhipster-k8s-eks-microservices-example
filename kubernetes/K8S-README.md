@@ -9,8 +9,6 @@ $ docker image tag store deepu105/store
 $ docker push deepu105/store
 $ docker image tag invoice deepu105/invoice
 $ docker push deepu105/invoice
-$ docker image tag notification deepu105/notification
-$ docker push deepu105/notification
 $ docker image tag product deepu105/product
 $ docker push deepu105/product
 ```

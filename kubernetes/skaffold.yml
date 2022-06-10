@@ -8,9 +8,6 @@ build:
     - image: deepu105/invoice
       context: ../invoice
       jib: {}
-    - image: deepu105/notification
-      context: ../notification
-      jib: {}
     - image: deepu105/product
       context: ../product
       jib: {}

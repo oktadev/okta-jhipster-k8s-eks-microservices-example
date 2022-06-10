@@ -1,6 +1,6 @@
 {
   "generator-jhipster": {
-    "appsFolders": ["store", "invoice", "notification", "product"],
+    "appsFolders": ["store", "invoice", "product"],
     "clusteredDbApps": [],
     "deploymentType": "kubernetes",
     "directoryPath": "../",

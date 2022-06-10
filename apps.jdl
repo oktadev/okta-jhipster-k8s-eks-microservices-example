@@ -49,22 +49,6 @@ application {
   entities Invoice, Shipment
 }
 
-application {
-  config {
-    baseName notification
-    applicationType microservice
-    packageName com.okta.demo.notification
-    serviceDiscoveryType eureka
-    authenticationType oauth2
-    databaseType mongodb
-    cacheProvider no
-    enableHibernateCache false
-    buildTool gradle
-    serverPort 8083
-  }
-  entities Notification
-}
-
 /**
  * Entities for Store Gateway
  */
@@ -191,38 +175,15 @@ service Invoice, Shipment with serviceClass
 paginate Invoice, Shipment with pagination
 microservice Invoice, Shipment with invoice
 
-
-/**
- * Entities for notification microservice
- */
-
-
-entity Notification {
-    date Instant required
-    details String
-    sentDate Instant required
-    format NotificationType required
-    userId Long required
-    productId Long required
-}
-
-enum NotificationType {
-    EMAIL, SMS, PARCEL
-}
-
-microservice Notification with notification
-
 /**
  * Deployments
  */
 
 deployment {
   deploymentType kubernetes
-  appsFolders [store, invoice, notification, product]
+  appsFolders [store, invoice, product]
   dockerRepositoryName "deepu105" // @Replace With Your Docker repo name@
   serviceDiscoveryType eureka
   kubernetesServiceType LoadBalancer
   kubernetesNamespace jhipster
 }
-
-
