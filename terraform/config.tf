@@ -22,7 +22,7 @@ locals {
   name            = "okta-jhipster-eks-${random_string.suffix.result}"
   region          = var.region
   cluster_version = "1.22"
-  instance_types  = ["t2.large"] // can be multiple
+  instance_types  = ["t2.large"] # can be multiple, comma separated
 
   vpc_cidr = "10.0.0.0/16"
   azs      = slice(data.aws_availability_zones.available.names, 0, 3)
