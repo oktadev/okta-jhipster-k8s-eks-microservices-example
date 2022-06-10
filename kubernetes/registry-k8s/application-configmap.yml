@@ -25,6 +25,17 @@ data:
         authentication:
           jwt:
             base64-secret: Yjc2YmU4NTkzODM0YmY3MmMxZTAwZmFkNTI5YzhhNDk3MzUzMzlhNTk1ZDlkZGEzOGMzZDkzMDE5Njk0Yjg1ZDA0NTdmZTA5ZjE1MmZmZjIxZmYxYmVlZTYwZjhiMTJhOTRmNg==
+    spring:
+      security:
+        oauth2:
+          client:
+            provider:
+              oidc:
+                issuer-uri: https://<your-okta-domain>/oauth2/default
+            registration:
+              oidc:
+                client-id: <client-id>
+                client-secret: <client-secret>
   # app specific configuration
   jhipster-registry.yml: |-
     eureka:

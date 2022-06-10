@@ -68,7 +68,7 @@ spec:
             # StatefulSet specific configuration
             # Registry configuration
             - name: SPRING_PROFILES_ACTIVE
-              value: prod,k8s
+              value: prod,k8s,oauth2
             - name: SPRING_SECURITY_USER_PASSWORD
               valueFrom:
                 secretKeyRef:
