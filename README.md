@@ -99,11 +99,13 @@ Once you are done with the tutorial, you can delete the cluster and all the reso
 
 ```bash
 cd terraform
-# Takes a while. If this fails, then manually delete load balancers from AWS EC2 console and try again
+# The commands below might take a while to finish.
 terraform destroy -target="module.eks_blueprints_kubernetes_addons" -auto-approve
+# If deleting VPC fails, then manually delete the load balancers associated 
+# with the VPC from AWS EC2 console and try again.
 terraform destroy -target="module.eks_blueprints" -auto-approve
 terraform destroy -target="module.vpc" -auto-approve
-# cleanup anything left over
+# cleanup anything left over.
 terraform destroy -auto-approve
 ```
 
