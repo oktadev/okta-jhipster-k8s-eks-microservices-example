@@ -3,7 +3,7 @@
 # backend "s3" {
 #   bucket = "create-an-s3-bucket-and-provide-name-here"
 #   region = local.region
-#   key    = "e2e/eks-cluster-with-new-vpc/terraform.tfstate"
+#   key    = "eks-cluster-with-new-vpc/terraform.tfstate"
 # }
 
 variable "region" {
