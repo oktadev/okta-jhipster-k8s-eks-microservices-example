@@ -106,3 +106,23 @@ terraform destroy -target="module.vpc" -auto-approve
 # cleanup anything left over
 terraform destroy -auto-approve
 ```
+
+## Links
+
+This example uses the following open source projects:
+
+- [JHipster](https://www.jhipster.tech)
+- [React](https://reactjs.org/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring Security](https://spring.io/projects/spring-security)
+- [Terraform](https://www.terraform.io/)
+- [AWS VPC Terraform module](https://github.com/terraform-aws-modules/terraform-aws-vpc)
+- [Amazon EKS Blueprints for Terraform](https://github.com/aws-ia/terraform-aws-eks-blueprints)
+
+## Help
+
+Please post any questions as comments on the [blog post](), or visit our [Okta Developer Forums](https://devforum.okta.com/). You can also email developers@okta.com if you'd like to create a support ticket.
+
+## License
+
+Apache 2.0, see [LICENSE](LICENSE).
