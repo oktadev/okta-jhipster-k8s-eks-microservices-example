@@ -74,7 +74,7 @@ Next, configure the JHipster Registry to use OIDC for authentication, modify `ku
   value: prod,k8s,oauth2
 ```
 
-## Deploy the microservice stack to GKE
+## Deploy the microservice stack to EKS
 
 You need to build Docker images for each app. This is specific to the JHipster application used in this tutorial. Navigate to each app folder (**store**, **invoice**, **product**) and run the following command:
 
